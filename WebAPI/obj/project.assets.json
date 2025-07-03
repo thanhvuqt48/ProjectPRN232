@@ -447,31 +447,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/hoanghai/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebAPI/WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\obj\\",
+      "projectPath": "/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebAPI/WebAPI.csproj",
+      "packagesPath": "/Users/hoanghai/.nuget/packages/",
+      "outputPath": "/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebAPI/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/hoanghai/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -489,8 +483,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -520,7 +513,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
