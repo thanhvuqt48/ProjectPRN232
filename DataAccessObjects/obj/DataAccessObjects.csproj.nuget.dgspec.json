@@ -13,12 +13,8 @@
         "packagesPath": "/Users/hoanghai/.nuget/packages/",
         "outputPath": "/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/BusinessObjects/obj/",
         "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/hoanghai/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
+        "configFilePaths": ["/Users/hoanghai/.nuget/NuGet/NuGet.Config"],
+        "originalTargetFrameworks": ["net8.0"],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
@@ -30,9 +26,7 @@
           }
         },
         "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
+          "warnAsError": ["NU1605"]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
@@ -94,12 +88,8 @@
         "packagesPath": "/Users/hoanghai/.nuget/packages/",
         "outputPath": "/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/DataAccessObjects/obj/",
         "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/hoanghai/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
+        "configFilePaths": ["/Users/hoanghai/.nuget/NuGet/NuGet.Config"],
+        "originalTargetFrameworks": ["net8.0"],
         "sources": {
           "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
@@ -115,9 +105,7 @@
           }
         },
         "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
+          "warnAsError": ["NU1605"]
         },
         "restoreAuditProperties": {
           "enableAudit": "true",
