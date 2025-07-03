@@ -73,3 +73,5 @@ wwwroot/
 
 project.lock.json
 project.assets.json
+**/obj/
+**/bin/
