@@ -75,3 +75,5 @@ project.lock.json
 project.assets.json
 **/obj/
 **/bin/
+**/obj/
+**/bin/
