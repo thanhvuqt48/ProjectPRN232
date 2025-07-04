@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using BusinessObjects.Domains;
 using BusinessObjects.Dtos.Auth;
@@ -59,6 +60,26 @@ namespace WebAPI.Controllers
             }
             return Ok(result);
         }
+        [HttpGet("userInfo")]
+        public IActionResult GetCurrentUser()
+        {
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            if (identity != null)
+            {
+                var userId = identity.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var email = identity.FindFirst(ClaimTypes.Email)?.Value;
+                var role = identity.FindFirst(ClaimTypes.Role)?.Value;
+
+                return Ok(new
+                {
+                    UserId = userId,
+                    Email = email,
+                    Role = role
+                });
+            }
+            return Unauthorized();
+        }
+
 
     }
 }
