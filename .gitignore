@@ -43,7 +43,11 @@ project.assets.json
 
 
 publish/
-wwwroot/
+!WebMVC/wwwroot/
+!WebMVC/wwwroot/css/
+!WebMVC/wwwroot/js/
+!WebMVC/wwwroot/lib/
+!WebMVC/wwwroot/favicon.ico
 
 
 *.vs/
