@@ -5,6 +5,7 @@ namespace BusinessObjects.Domains;
 
 public partial class Account
 {
+
     public int AccountId { get; set; }
 
     public string? Username { get; set; }
@@ -32,6 +33,8 @@ public partial class Account
     public string? RefreshToken { get; set; }
 
     public DateTime? RefreshTokenExpiryTime { get; set; }
+
+    public bool? TwoFactorEnabled { get; set; }
 
     public virtual ICollection<Accommodation> Accommodations { get; set; } = new List<Accommodation>();
 
