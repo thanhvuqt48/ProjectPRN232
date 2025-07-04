@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -277,6 +277,10 @@ public partial class RentNestSystemContext : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .HasColumnName("password");
+            entity.Property(e => e.RefreshToken)
+                .HasMaxLength(255)
+                .HasDefaultValueSql("(getdate())");
+            entity.Property(e => e.RefreshTokenExpiryTime).HasDefaultValueSql("(getdate())");
             entity.Property(e => e.Role)
                 .HasMaxLength(1)
                 .IsUnicode(false)

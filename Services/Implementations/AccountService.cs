@@ -15,9 +15,32 @@ namespace Services.Implementations
         {
             _accountRepository = accountRepository;
         }
-        public async Task<Account> GetSystemAccountByEmailAsync(string email)
+        public async Task<Account> GetAccountByEmailAsync(string email)
         {
             return await _accountRepository.GetSystemAccountByEmailAsync(email);
         }
+        public async Task<bool> UpdateAccountAsync(int id, Account updatedAccount)
+        {
+            var acc = await _accountRepository.GetByIdAsync(id);
+            if (acc == null) return false;
+            acc.Email = updatedAccount.Email;
+            acc.Username = updatedAccount.Username;
+            // ... các trường khác
+            await _accountRepository.UpdateAsync(acc);
+            await _accountRepository.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> DeleteAccountAsync(int id)
+        {
+            var acc = await _accountRepository.GetByIdAsync(id);
+            if (acc == null) return false;
+            _accountRepository.Delete(acc);
+            await _accountRepository.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<IEnumerable<Account>> GetAllAccountsAsync()
+        => await _accountRepository.GetAllAsync();
     }
 }

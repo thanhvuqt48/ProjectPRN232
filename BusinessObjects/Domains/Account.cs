@@ -29,6 +29,10 @@ public partial class Account
 
     public string Role { get; set; } = null!;
 
+    public string? RefreshToken { get; set; }
+
+    public DateTime? RefreshTokenExpiryTime { get; set; }
+
     public virtual ICollection<Accommodation> Accommodations { get; set; } = new List<Accommodation>();
 
     public virtual ICollection<Conversation> ConversationReceivers { get; set; } = new List<Conversation>();

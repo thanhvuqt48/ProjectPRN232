@@ -24,5 +24,17 @@ namespace Repositories.Implementations
             }
             return account;
         }
+        public async Task<Account> CreateAsync(Account user)
+        {
+            _context.Accounts.Add(user);
+            await _context.SaveChangesAsync();
+            return user;
+        }
+
+        public async Task UpdateAsync(Account user)
+        {
+            _context.Accounts.Update(user);
+            await _context.SaveChangesAsync();
+        }
     }
 }
