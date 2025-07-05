@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj" />
+    <ProjectReference Include="..\RenNest.Core\RenNest.Core.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
