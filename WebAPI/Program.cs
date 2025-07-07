@@ -8,6 +8,10 @@ using Repositories.Implementations;
 using Repositories.Interfaces;
 using Services.Implementations;
 using Services.Interfaces;
+using Repositories.Implements;
+using Service.Interfaces;
+using Service.Implements;
+using RentNest.Infrastructure.DataAccess;
 
 namespace WebAPI
 {
@@ -20,12 +24,19 @@ namespace WebAPI
             builder.Services.AddDbContext<RentNestSystemContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             // ======= DEPENDENCY INJECTION =======
+            // DAO
+            builder.Services.AddScoped<AccommodationDAO>();
+            builder.Services.AddScoped<PostDAO>();
             // Repository
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<Repositories.Interfaces.IAccommodationRepository, Repositories.Implements.AccommodationRepository>();
+            builder.Services.AddScoped<Repositories.Interfaces.IPostRepository, Repositories.Implements.PostRepository>();
             // Service
             builder.Services.AddScoped<IPasswordHasherCustom, PasswordHasherCustom>(); // Đăng ký interface với implementation
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
+            builder.Services.AddScoped<Service.Interfaces.IAccommodationService, Service.Implements.AccommodationService>();
+            builder.Services.AddScoped<Service.Interfaces.IPostService, Service.Implements.PostService>();
             // builder.Services.AddScoped<IAzureOpenAIService, AzureOpenAIService>();
             builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
             // --- JWT Authentication Configuration ---
