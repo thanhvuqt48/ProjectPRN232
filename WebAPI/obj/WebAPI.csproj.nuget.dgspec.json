@@ -276,6 +276,24 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Otp.NET": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -343,9 +361,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Otp.Net": {
+              "target": "Package",
+              "version": "[1.4.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

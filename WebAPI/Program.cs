@@ -1,4 +1,3 @@
-
 using System.Text;
 using DataAccessObjects.DB;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -9,7 +8,6 @@ using Repositories.Implementations;
 using Repositories.Interfaces;
 using Services.Implementations;
 using Services.Interfaces;
-using WebAPI.Services;
 
 namespace WebAPI
 {
@@ -25,61 +23,66 @@ namespace WebAPI
             // Repository
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
             // Service
+            builder.Services.AddScoped<IPasswordHasherCustom, PasswordHasherCustom>(); // Đăng ký interface với implementation
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
             // builder.Services.AddScoped<IAzureOpenAIService, AzureOpenAIService>();
             builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
-            // ======= AUTHENTICATION =======
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(options =>
+            // --- JWT Authentication Configuration ---
+            builder.Services.AddAuthentication(options =>
             {
-                options.LoginPath = "/auth/login"; // hoặc trang login của bạn
-                options.Cookie.HttpOnly = true;
-                options.Cookie.Name = "accessToken";
-                options.Cookie.SameSite = SameSiteMode.Lax;
-            })
-            .AddJwtBearer(options =>
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
                     ValidateAudience = true,
-                    ValidAudience = builder.Configuration["Jwt:Audience"],
                     ValidateLifetime = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
-                    ),
-                    ValidateIssuerSigningKey = true
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
                 };
-
                 options.Events = new JwtBearerEvents
                 {
-                    OnMessageReceived = ctx =>
+                    OnMessageReceived = context =>
                     {
-                        ctx.Request.Cookies.TryGetValue("accessToken", out var token);
-                        if (!string.IsNullOrEmpty(token))
+                        // Lấy token từ cookie nếu không có trong header Authorization
+                        if (string.IsNullOrEmpty(context.Token))
                         {
-                            ctx.Token = token;
+                            context.Token = context.Request.Cookies["accessToken"];
+                        }
+                        return Task.CompletedTask;
+                    },
+                    OnAuthenticationFailed = context =>
+                    {
+                        // Log authentication failures
+                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                        {
+                            context.Response.Headers.Append("Token-Expired", "true");
                         }
                         return Task.CompletedTask;
                     }
                 };
             });
             // ======= SESSION =======
-            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddDistributedMemoryCache(); // In-memory cache cho phát triển
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.IdleTimeout = TimeSpan.FromMinutes(20); // Thời gian sống của session tạm thời cho 2FA
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // Luôn dùng HTTPS trong production
+                options.Cookie.SameSite = SameSiteMode.None; // Hoặc None nếu client và API khác domain và có cấu hình CORS phù hợp
             });
             // ======= CORS =======
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowFrontend", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5048")
+                    policy.WithOrigins("http://localhost:5048", "https://localhost:5048")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();
