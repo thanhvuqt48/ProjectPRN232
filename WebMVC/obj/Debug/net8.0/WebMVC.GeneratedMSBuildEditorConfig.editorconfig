@@ -22,8 +22,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb21tb2RhdGlvbnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+[/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/AccountMVC/TwoFactorSetup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudE1WQy9Ud29GYWN0b3JTZXR1cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/AuthMVC/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aE1WQy9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/AuthMVC/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aE1WQy9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/AuthMVC/TwoFactorVerification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aE1WQy9Ud29GYWN0b3JWZXJpZmljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/hoanghai/Documents/HoangHai/Project/ProjectPRN232/WebMVC/Views/Home/Index.cshtml]
