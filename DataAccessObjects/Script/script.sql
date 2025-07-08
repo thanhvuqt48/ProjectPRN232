@@ -15,7 +15,9 @@ CREATE TABLE Account (
     role CHAR(1) NOT NULL CHECK (role IN ('U', 'A', 'S', 'L')),-- U=User, S = Staff, A=Admin, L=Landlord
     RefreshToken NVARCHAR(255) NULL,
     RefreshTokenExpiryTime DATETIME2(7) NULL,
-    TwoFactorEnabled BIT NULL 
+    TwoFactorEnabled BIT NULL ,
+    AuthenticatorSecretKey NVARCHAR(255) NULL,
+    RecoveryCodesJson NVARCHAR(255) NULL
 );
 
 CREATE UNIQUE INDEX UX_Account_Username
