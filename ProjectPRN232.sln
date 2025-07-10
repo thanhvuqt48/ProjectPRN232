@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVC", "WebMVC\WebMVC.csproj", "{72F0B123-1F9C-4079-B94F-44845F8F3410}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenNest.Core", "RenNest.Core\RenNest.Core.csproj", "{D3667AE5-B2AA-09E2-22C1-7F4B725C2C4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{72F0B123-1F9C-4079-B94F-44845F8F3410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F0B123-1F9C-4079-B94F-44845F8F3410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F0B123-1F9C-4079-B94F-44845F8F3410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3667AE5-B2AA-09E2-22C1-7F4B725C2C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3667AE5-B2AA-09E2-22C1-7F4B725C2C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3667AE5-B2AA-09E2-22C1-7F4B725C2C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3667AE5-B2AA-09E2-22C1-7F4B725C2C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

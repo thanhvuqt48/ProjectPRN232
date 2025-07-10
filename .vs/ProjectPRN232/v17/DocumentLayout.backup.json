@@ -1,12 +1,190 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8441FF61-0532-43A9-8BF0-CCF4C54C6402}|Repositories\\Repositories.csproj|e:\\fpt_university\\prn232\\projectprn232\\repositories\\implementations\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8441FF61-0532-43A9-8BF0-CCF4C54C6402}|Repositories\\Repositories.csproj|solutionrelative:repositories\\implementations\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54A9C19-C28C-4629-93B4-C88E3EB46EEE}|WebAPI\\WebAPI.csproj|e:\\fpt_university\\prn232\\projectprn232\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54A9C19-C28C-4629-93B4-C88E3EB46EEE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F0B123-1F9C-4079-B94F-44845F8F3410}|WebMVC\\WebMVC.csproj|e:\\fpt_university\\prn232\\projectprn232\\webmvc\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72F0B123-1F9C-4079-B94F-44845F8F3410}|WebMVC\\WebMVC.csproj|solutionrelative:webmvc\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72F0B123-1F9C-4079-B94F-44845F8F3410}|WebMVC\\WebMVC.csproj|e:\\fpt_university\\prn232\\projectprn232\\webmvc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72F0B123-1F9C-4079-B94F-44845F8F3410}|WebMVC\\WebMVC.csproj|solutionrelative:webmvc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54A9C19-C28C-4629-93B4-C88E3EB46EEE}|WebAPI\\WebAPI.csproj|e:\\fpt_university\\prn232\\projectprn232\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54A9C19-C28C-4629-93B4-C88E3EB46EEE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7FD92AB-B206-437F-B67C-E4840D2BF31B}|Services\\Services.csproj|e:\\fpt_university\\prn232\\projectprn232\\services\\implementations\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7FD92AB-B206-437F-B67C-E4840D2BF31B}|Services\\Services.csproj|solutionrelative:services\\implementations\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7BAD0A6-3BB9-4CAE-8129-ACEF9BF1F94A}|DataAccessObjects\\DataAccessObjects.csproj|e:\\fpt_university\\prn232\\projectprn232\\dataaccessobjects\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7BAD0A6-3BB9-4CAE-8129-ACEF9BF1F94A}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8441FF61-0532-43A9-8BF0-CCF4C54C6402}|Repositories\\Repositories.csproj|e:\\fpt_university\\prn232\\projectprn232\\repositories\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8441FF61-0532-43A9-8BF0-CCF4C54C6402}|Repositories\\Repositories.csproj|solutionrelative:repositories\\interfaces\\iaccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7BAD0A6-3BB9-4CAE-8129-ACEF9BF1F94A}|DataAccessObjects\\DataAccessObjects.csproj|e:\\fpt_university\\prn232\\projectprn232\\dataaccessobjects\\userprofiledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7BAD0A6-3BB9-4CAE-8129-ACEF9BF1F94A}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\userprofiledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7FD92AB-B206-437F-B67C-E4840D2BF31B}|Services\\Services.csproj|e:\\fpt_university\\prn232\\projectprn232\\services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7FD92AB-B206-437F-B67C-E4840D2BF31B}|Services\\Services.csproj|solutionrelative:services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebMVC\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebMVC\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebMVC\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "WebMVC\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T07:49:05.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA9wCAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T07:07:09.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Services\\Implementations\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AccountService.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Services\\Implementations\\AccountService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AccountService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T04:02:20.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAccountRepository.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Repositories\\Interfaces\\IAccountRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAccountRepository.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Repositories\\Interfaces\\IAccountRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IAccountRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T04:00:00.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserProfileDAO.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\DataAccessObjects\\UserProfileDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\UserProfileDAO.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\DataAccessObjects\\UserProfileDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\UserProfileDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T03:54:58.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountDAO.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\DataAccessObjects\\AccountDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\AccountDAO.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\DataAccessObjects\\AccountDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\AccountDAO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T03:54:18.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MailService.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Services\\Implementations\\MailService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\MailService.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Services\\Implementations\\MailService.cs",
+              "RelativeToolTip": "Services\\Implementations\\MailService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:18:44.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Repositories\\Implementations\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\AccountRepository.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\Repositories\\Implementations\\AccountRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\AccountRepository.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAkwA0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T13:21:36.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAqwNYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T11:36:42.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebMVC\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebMVC\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\FPT_UNIVERSITY\\PRN232\\ProjectPRN232\\WebMVC\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebMVC\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAiwKoAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T09:40:32.026Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -152,6 +152,36 @@ namespace WebAPI.Services
             {
                 AccessToken = accessToken,
                 RefreshToken = refreshToken
+            };
+        }
+
+        // Thêm method này vào AuthService của bạn
+        public async Task<TokenResponseDto?> GenerateTokenForExternalLoginAsync(Account account)
+        {
+            if (account == null) return null;
+
+            // Tận dụng lại method CreateToken và GenerateAndSaveRefreshToken
+            var response = new TokenResponseDto
+            {
+                AccessToken = CreateToken(account),
+                RefreshToken = await GenerateAndSaveRefreshToken(account),
+
+            };
+
+            return response;
+        }
+
+        // Hoặc sử dụng method GenerateTokenPair có sẵn (nếu _tokenGenerator hoạt động tốt)
+        public async Task<TokenResponseDto?> GenerateTokenForExternalLoginAsyncV2(Account account)
+        {
+            if (account == null) return null;
+
+            var tokenPair = await GenerateTokenPair(account);
+
+            return new TokenResponseDto
+            {
+                AccessToken = tokenPair.AccessToken,
+                RefreshToken = tokenPair.RefreshToken,
             };
         }
 

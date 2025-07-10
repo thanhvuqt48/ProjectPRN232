@@ -14,5 +14,6 @@ namespace WebAPI.Services
         Task<TokenResponseDto?> RefreshTokenAsync(RefreshTokenRequestDto request);
         Task<TokenResponseDto> GenerateTokenPair(Account user);
         public void setTokensInsideCookie(TokenResponseDto tokenDto, HttpContext context);
+        Task<TokenResponseDto?> GenerateTokenForExternalLoginAsync(Account account);
     }
 }
