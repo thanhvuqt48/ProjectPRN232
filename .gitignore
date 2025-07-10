@@ -43,7 +43,11 @@ project.assets.json
 
 
 publish/
-wwwroot/
+!WebMVC/wwwroot/
+!WebMVC/wwwroot/css/
+!WebMVC/wwwroot/js/
+!WebMVC/wwwroot/lib/
+!WebMVC/wwwroot/favicon.ico
 
 
 *.vs/
@@ -73,6 +77,13 @@ wwwroot/
 
 project.lock.json
 project.assets.json
+<<<<<<< HEAD
 /.vs/ProjectPRN232/CopilotIndices/17.13.441.19478/CodeChunks.db
 /.vs/ProjectPRN232/CopilotIndices/17.13.441.19478/SemanticSymbols.db
 /.vs/ProjectPRN232/DesignTimeBuild/.dtbcache.v2
+=======
+**/obj/
+**/bin/
+**/obj/
+**/bin/
+>>>>>>> 9d91c952f80a3f4794008d4cf9a6553b5c8171e9
