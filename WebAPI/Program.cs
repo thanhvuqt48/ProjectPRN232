@@ -10,10 +10,11 @@ using Repositories.Interfaces;
 using Services.Implementations;
 using Services.Interfaces;
 using WebAPI.Services;
-using Repositories.Implements;
-using Service.Interfaces;
-using Service.Implements;
+using Microsoft.AspNetCore.Authentication.OAuth;
 using RentNest.Infrastructure.DataAccess;
+using BusinessObjects.Consts;
+using BusinessObjects.Configs;
+using DataAccessObjects;
 
 namespace WebAPI
 {
@@ -28,6 +29,8 @@ namespace WebAPI
             // ======= DEPENDENCY INJECTION =======
             // DAO
             builder.Services.AddScoped<AccommodationDAO>();
+            builder.Services.AddScoped<AccountDAO>();
+            builder.Services.AddScoped<UserProfileDAO>();
             builder.Services.AddScoped<PostDAO>();
             // Repository
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
@@ -40,6 +43,7 @@ namespace WebAPI
             builder.Services.AddScoped<Service.Interfaces.IPostService, Service.Implements.PostService>();
             // builder.Services.AddScoped<IAzureOpenAIService, AzureOpenAIService>();
             builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+            builder.Services.AddScoped<IMailService, MailService>();
             builder.Services.AddHttpContextAccessor();
             // ======= AUTHENTICATION =======
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -98,6 +102,42 @@ namespace WebAPI
                 });
             });
 
+            var authSettings = builder.Configuration.GetSection("AuthSettings").Get<AuthSettings>();
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = AuthSchemes.Cookie;
+                options.DefaultSignInScheme = AuthSchemes.Cookie;
+            })
+            .AddCookie(AuthSchemes.Cookie, config =>
+            {
+                config.LoginPath = "/Auth/Login";
+                config.AccessDeniedPath = "/Auth/AccessDenied";
+                config.ExpireTimeSpan = TimeSpan.FromMinutes(60); // Thời gian hết hạn cookie
+            })
+            .AddGoogle(AuthSchemes.Google, options =>
+            {
+                options.ClientId = authSettings.Google.ClientId;
+                options.ClientSecret = authSettings.Google.ClientSecret;
+                options.CallbackPath = "/Auth/signIn-google";
+            })
+            .AddFacebook(AuthSchemes.Facebook, options =>
+            {
+                options.AppId = authSettings.Facebook.AppId;
+                options.AppSecret = authSettings.Facebook.AppSecret;
+                options.CallbackPath = "/Auth/signIn-facebook";
+                options.Events = new OAuthEvents
+                {
+                    OnRemoteFailure = context =>
+                    {
+                        context.Response.Redirect("/Auth/Login");
+                        context.HandleResponse();
+                        return Task.CompletedTask;
+                    }
+                };
+            });
+            builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+            builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection("AuthSettings"));
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

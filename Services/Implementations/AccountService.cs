@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BusinessObjects.Domains;
+using BusinessObjects.Dtos;
 using Repositories.Interfaces;
 using Services.Interfaces;
 
@@ -42,5 +43,10 @@ namespace Services.Implementations
 
         public async Task<IEnumerable<Account>> GetAllAccountsAsync()
         => await _accountRepository.GetAllAsync();
+
+        public async Task<Account> CreateExternalAccountAsync(ExternalAccountRegisterDto dto)
+        {
+            return await _accountRepository.CreateExternalAccountAsync(dto);
+        }
     }
 }

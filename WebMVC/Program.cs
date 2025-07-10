@@ -1,3 +1,5 @@
+using BusinessObjects.Consts;
+
 namespace WebMVC
 {
     public class Program
@@ -14,6 +16,14 @@ namespace WebMVC
                 options.Cookie.IsEssential = true;
             });
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddAuthentication(AuthSchemes.Cookie)
+    .AddCookie(AuthSchemes.Cookie, config =>
+    {
+        config.LoginPath = "/Auth/Login";
+        config.AccessDeniedPath = "/Auth/AccessDenied";
+    });
+
 
             var app = builder.Build();
 
