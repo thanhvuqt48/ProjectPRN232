@@ -140,7 +140,9 @@ namespace WebMVC.Controllers
                     HttpContext.Session.SetString("RefreshToken", loginResponse.RefreshToken ?? string.Empty);
                     HttpContext.Session.SetString("AccessToken", loginResponse.AccessToken ?? string.Empty);
                     var userEmailFromToken = jsonToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+                    var userRoleFromToken = jsonToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
                     HttpContext.Session.SetString("Email", userEmailFromToken!);
+                    HttpContext.Session.SetString("Role", userRoleFromToken!);
                     TempData["SuccessMessage"] = "Xác thực 2FA thành công!";
                     return RedirectToAction("Index", "Home");
                 }

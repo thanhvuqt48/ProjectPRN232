@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentNest.Infrastructure.DataAccess
+namespace DataAccessObjects.DAO
 {
     public class BaseDAO<TEntity> where TEntity : class
     {

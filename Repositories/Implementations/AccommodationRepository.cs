@@ -1,5 +1,5 @@
 ﻿using BusinessObjects.Domains;
-using RentNest.Infrastructure.DataAccess;
+using DataAccessObjects.DAO;
 using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;

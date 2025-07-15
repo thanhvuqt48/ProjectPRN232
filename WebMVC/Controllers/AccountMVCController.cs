@@ -82,7 +82,9 @@ namespace WebMVC.Controllers
                         AllowRefresh = true
                     });
                     var userEmailFromToken = jsonToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+                    var userRoleFromToken = jsonToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
                     HttpContext.Session.SetString("Email", userEmailFromToken!);
+                    HttpContext.Session.SetString("Role", userRoleFromToken!);
                     return RedirectToAction("Index", "Home");
                 }
                 ModelState.AddModelError(string.Empty, "Mã xác thực không hợp lệ. Vui lòng kiểm tra lại.");

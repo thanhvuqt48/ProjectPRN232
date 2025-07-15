@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Domains;
+using DataAccessObjects.DAO;
 using DataAccessObjects.DB;
 using Microsoft.EntityFrameworkCore;
 using RentNest.Core.UtilHelper;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentNest.Infrastructure.DataAccess
+namespace DataAccessObjects.DAO
 {
     public class AccommodationDAO : BaseDAO<Accommodation>
     {

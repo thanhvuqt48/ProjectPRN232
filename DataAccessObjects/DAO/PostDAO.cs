@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentNest.Infrastructure.DataAccess
+namespace DataAccessObjects.DAO
 {
     public class PostDAO : BaseDAO<Post>
     {
@@ -82,7 +82,7 @@ namespace RentNest.Infrastructure.DataAccess
                      x.LatestPackage.Pricing.PackageType.PackageTypeName == "VIP Vàng"))
                 .OrderBy(x =>
                 {
-                    var package = x.LatestPackage.Pricing.PackageType.PackageTypeName;
+                    var package = x.LatestPackage!.Pricing.PackageType.PackageTypeName;
                     return package == "VIP Kim Cương" ? 0 : 1;
                 })
                 .ThenByDescending(x => x.Post.PublishedAt)
