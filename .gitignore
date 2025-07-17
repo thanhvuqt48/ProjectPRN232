@@ -1,16 +1,13 @@
-
+# Đã có sẵn
 bin/
 obj/
 out/
 .vs/
 
-
 ProjectPRN232/bin/
 ProjectPRN232/obj/
 ProjectPRN232/out/
 ProjectPRN232/vs/
-
-
 
 .vscode/
 .idea/
@@ -19,10 +16,8 @@ ProjectPRN232/vs/
 *.userosscache
 *.sln.docstates
 
-
 logs/
 *.log
-
 
 *.cache
 *.lock
@@ -30,17 +25,14 @@ logs/
 *.seed
 *.coveragerc
 
-
 appsettings.Development.json
 appsettings.Local.json
 appsettings.*.json
-
 
 Properties/launchSettings.json
 
 project.lock.json
 project.assets.json
-
 
 publish/
 !WebMVC/wwwroot/
@@ -49,7 +41,6 @@ publish/
 !WebMVC/wwwroot/lib/
 !WebMVC/wwwroot/favicon.ico
 
-
 *.vs/
 *.ncrunch*
 *.localhistory
@@ -57,7 +48,7 @@ publish/
 *.vsix
 .vsconfig
 
-# B? qua c�c file build
+# Bỏ qua các file build
 *.dll
 *.exe
 *.pdb
@@ -68,16 +59,22 @@ publish/
 *.nupkg
 *.ntvs*
 
-
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-
 project.lock.json
 project.assets.json
+
 **/obj/
 **/bin/
-**/obj/
-**/bin/
+
+# 👉 Thêm mới để tránh add các file từ ảnh
+*.nuget.g.props
+*.nuget.dgspec.json
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.g.cs
+*.g.i.cs
